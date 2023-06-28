@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nasa_workshop/src/nasa_app/presentation/home_screen/home_screen_controller.dart';
+import 'package:nasa_workshop/src/nasa_app/presentation/pages/home_screen/home_screen_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   final HomeScreenController homeScreenController = HomeScreenController();
@@ -22,9 +22,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               MaterialButton(
-                onPressed: () {
-                  homeScreenController.goToListScreen(context);
-                },
+                onPressed: () => homeScreenController.goToListScreen(context),
                 child: const Text("Start"),
               )
             ],

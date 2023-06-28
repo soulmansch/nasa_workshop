@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'nasa_app/presentation/home_screen/home_screen_view.dart';
-import 'nasa_app/presentation/list_screen/list_screen_controller.dart';
-import 'nasa_app/presentation/list_screen/list_screen_view.dart';
+import 'nasa_app/presentation/pages/details_screen/details_screen_view.dart';
+import 'nasa_app/presentation/pages/home_screen/home_screen_view.dart';
+import 'nasa_app/presentation/pages/list_screen/list_screen_controller.dart';
+import 'nasa_app/presentation/pages/list_screen/list_screen_view.dart';
 
 class NasaApp extends StatelessWidget {
   const NasaApp({super.key});
@@ -23,6 +24,7 @@ class NasaApp extends StatelessWidget {
         routes: {
           '/': (context) => HomeScreen(),
           '/list': (context) => const ListScreen(),
+          '/details': (context) => const DetailsScreen(),
         },
       ),
     );
