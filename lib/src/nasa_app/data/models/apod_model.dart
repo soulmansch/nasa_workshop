@@ -2,6 +2,7 @@ import 'package:intl/intl.dart';
 
 import '../../constants/enums.dart';
 
+// Modele des Apods
 class Apod {
   String? copyRight;
   DateTime date;
@@ -24,5 +25,19 @@ class Apod {
   String get formattedDate {
     final formatter = DateFormat('dd-MM-yyyy');
     return formatter.format(date);
+  }
+
+  factory Apod.fromJson(Map<String, dynamic> json) {
+    return Apod(
+      copyRight: json['copyRight'],
+      date: DateTime.parse(json['date'] ?? DateTime.now().toString()),
+      explanation: json['explanation'] ?? "explanation",
+      hdurl: json['hdurl'],
+      mediaType:
+          json['mediaType'] == 'video' ? MediaType.video : MediaType.image,
+      title: json['title'] ?? "title",
+      url: json['url'] ?? "",
+      thumbnailUrl: json['thumbnailUrl'],
+    );
   }
 }

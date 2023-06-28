@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../list_screen/list_screen_view.dart';
+import 'package:nasa_workshop/src/nasa_app/presentation/home_screen/home_screen_controller.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final HomeScreenController homeScreenController = HomeScreenController();
+  HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +23,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
               MaterialButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ListScreen()),
-                  );
+                  homeScreenController.goToListScreen(context);
                 },
                 child: const Text("Start"),
               )

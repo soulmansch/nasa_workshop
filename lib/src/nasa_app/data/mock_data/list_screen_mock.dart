@@ -2,6 +2,7 @@ import 'package:nasa_workshop/src/nasa_app/constants/enums.dart';
 
 import '../models/apod_model.dart';
 
+// Mock data pour tester l'affichage sans appeler les API
 List<Apod> listScreenMock = [
   Apod(
     date: DateTime(2023, 6, 28),
