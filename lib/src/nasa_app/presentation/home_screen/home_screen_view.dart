@@ -5,11 +5,26 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Stack(children: [
         Align(
           alignment: Alignment.center,
-          child: Text("HomeScreen"),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                "/images/nasa_logo.png",
+                height: 200,
+              ),
+              const SizedBox(height: 20),
+              MaterialButton(
+                onPressed: () {},
+                child: const Text("Start"),
+              )
+            ],
+          ),
         )
       ]),
     );
