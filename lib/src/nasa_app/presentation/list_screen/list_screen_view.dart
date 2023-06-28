@@ -2,8 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'list_screen_controller.dart';
 
-class ListScreen extends StatelessWidget {
+class ListScreen extends StatefulWidget {
   const ListScreen({super.key});
+
+  @override
+  State<ListScreen> createState() => _ListScreenState();
+}
+
+class _ListScreenState extends State<ListScreen> {
+  @override
+  void initState() {
+    Provider.of<ListScreenController>(context, listen: false).fetch();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
