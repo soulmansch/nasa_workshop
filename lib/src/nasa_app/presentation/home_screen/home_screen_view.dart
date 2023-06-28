@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../list_screen/list_screen_view.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,12 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ListScreen()),
+                  );
+                },
                 child: const Text("Start"),
               )
             ],
