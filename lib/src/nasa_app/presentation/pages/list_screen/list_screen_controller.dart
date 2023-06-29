@@ -16,7 +16,6 @@ class ListScreenController with ChangeNotifier {
 
   // pour savoir si on peut aller chercher des apods ou attendre que la requete en cours termine
   bool _isLoading = false;
-
   bool get isLoading => _isLoading;
 
   // on introduit la pagination pour afficher des apods au fur et a mesur q'on scrolle
@@ -26,6 +25,10 @@ class ListScreenController with ChangeNotifier {
   bool hasMoreData = true;
   ScrollController scrollController = ScrollController();
   double scrollThreshold = 200.0;
+
+  // Gerer le state en cas d'erreur
+  bool _hasError = false;
+  bool get hasError => _hasError;
 
   ListScreenController() {
     dio = Dio();
@@ -77,6 +80,7 @@ class ListScreenController with ChangeNotifier {
     DateTime endDate = DateTime.now().subtract(Duration(days: 20 * (page - 1)));
 
     try {
+      _hasError = false;
       // Si une requete est en cours ou pas de data a afficher retourner immediatement
       if (!hasMoreData || _isLoading) return;
 
@@ -96,7 +100,9 @@ class ListScreenController with ChangeNotifier {
       _isLoading = false;
       notifyListenersWithDelay();
     } catch (e) {
-      // On s'occupe des erreurs ici
+      _hasError = true;
+      _isLoading = false;
+      notifyListenersWithDelay();
     }
   }
 

@@ -22,7 +22,7 @@ class _ListScreenState extends State<ListScreen> {
         builder: (context, screenController, _) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text("ListScreen"),
+          title: const Text("List Apods"),
           bottom: PreferredSize(
               preferredSize: const Size.fromHeight(4.0),
               child: screenController.isLoading
@@ -55,6 +55,25 @@ class _ListScreenState extends State<ListScreen> {
                   }
                 },
               ),
+        bottomSheet: screenController.hasError
+            ? Container(
+                color: Colors.orangeAccent,
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      const Expanded(
+                          child: Text(
+                              "La requête prend trop de temps pour se terminer. Veuillez réessayer.")),
+                      TextButton(
+                          onPressed: () => screenController.fetch(),
+                          child: const Text("réessayer"))
+                    ],
+                  ),
+                ),
+              )
+            : null,
       );
     });
   }

@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                "/images/nasa_logo.png",
+                "/images/nasa_logo.jpeg",
                 height: 200,
               ),
               const SizedBox(height: 20),
