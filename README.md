@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/Soulmansch/nasa_workshop">
+  <a href="https://www.exfo.com/en/">
     <img src="https://telecomdrive.com/wp-content/uploads/2021/07/EXFO-logo-696x217.png" alt="Logo"  height="150">
   </a>
 
