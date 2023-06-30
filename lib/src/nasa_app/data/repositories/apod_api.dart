@@ -29,6 +29,8 @@ class ApodAPI {
         'end_date': formattedEndDate,
       });
 
+      print(response.data);
+
       List<Apod> apodList =
           (response.data as List).map((json) => Apod.fromJson(json)).toList();
 

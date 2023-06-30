@@ -29,12 +29,12 @@ class Apod {
 
   factory Apod.fromJson(Map<String, dynamic> json) {
     return Apod(
-      copyRight: json['copyRight'],
+      copyRight: json['copyright'],
       date: DateTime.parse(json['date'] ?? DateTime.now().toString()),
       explanation: json['explanation'] ?? "explanation",
       hdurl: json['hdurl'],
       mediaType:
-          json['mediaType'] == 'video' ? MediaType.video : MediaType.image,
+          json['media_type'] == 'video' ? MediaType.video : MediaType.image,
       title: json['title'] ?? "title",
       url: json['url'] ?? "",
       thumbnailUrl: json['thumbnailUrl'],
