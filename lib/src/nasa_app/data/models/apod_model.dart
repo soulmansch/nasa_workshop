@@ -37,7 +37,7 @@ class Apod {
           json['media_type'] == 'video' ? MediaType.video : MediaType.image,
       title: json['title'] ?? "title",
       url: json['url'] ?? "",
-      thumbnailUrl: json['thumbnailUrl'],
+      thumbnailUrl: json['thumbnail_url'],
     );
   }
 }
