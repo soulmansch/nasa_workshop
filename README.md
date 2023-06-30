@@ -1,16 +1,17 @@
-# nasa_workshop
+<br/>
+<p align="center">
+  <a href="https://github.com/Soulmansch/nasa_workshop">
+    <img src="https://telecomdrive.com/wp-content/uploads/2021/07/EXFO-logo-696x217.png" alt="Logo"  height="150">
+  </a>
 
-A new Flutter project.
+  <h3 align="center">EXFO: Technical Flutter Test</h3>
 
-## Getting Started
+</p>
 
-This project is a starting point for a Flutter application.
+![Downloads](https://img.shields.io/github/downloads/Soulmansch/nasa_workshop/total) ![Contributors](https://img.shields.io/github/contributors/Soulmansch/nasa_workshop?color=dark-green) ![Forks](https://img.shields.io/github/forks/Soulmansch/nasa_workshop?style=social) ![Issues](https://img.shields.io/github/issues/Soulmansch/nasa_workshop)
 
-A few resources to get you started if this is your first Flutter project:
+![Screen Shot](https://apod.nasa.gov/apod/image/2109/M16SHO.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Built With
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<https://flutter.dev>
